@@ -1,28 +1,22 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
   
 
 *{
     margin: 0px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   
+}
 
-    
-}
-html{
-    font-family:oswald;
-}
 body {
-    background-color:   #19181a;
+    background-color:   #181a25;
     color: antiquewhite;
-
+    font-size: 16px;
+ 
 
   }
   
 header {
-
-    background: rgba(83, 76, 76, 0.562);
-
-
+    background-color:   #181a25;
   }
 .encabezado{
         display: flex;
@@ -30,89 +24,60 @@ header {
         flex-direction: column;
         padding: 15px;
         flex-wrap: wrap;
-
-
   }
 
-
-.newsletter {
-    
-    padding: 20px;
-    float: right;
-}
-
-.newsletter h4 {
-    margin-bottom: 10px;
-}
-
-.newsletter input[type="email"] {
-    padding: 5px;
-    width: 250px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-right: 10px;
-}
-
-.newsletter button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
+  /* Jumbotron y formulario */
 
   .jumbotron  {
 display: flex;
-width: 100%;
-height: 100%;
+width: auto;
+height:500px;
 align-items:center;
-background-color: #121111;
-
-
-
-  }
-  .jumbotron h1{
-
-    display: flex;
-    width: 100%;
-    font-size: 45px;
-    text-align: center;
-        
+justify-content: center;
+background-color: #117c8471;
+flex-direction: column;
+gap: 40px;
 
   }
-   
-  .jumbotron p{
-font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
-text-align: justify;
 
-padding: 20px;
+.title_jm{
+    font-size: 55px;
+  }
 
-    }
-  
+.registro{
+ display: flex;
+ flex-direction:column;
+ align-items: center;
+ gap: 20px;
+ 
+}
+.registro input{
 
+    border-radius: 20px;
+    width: 300px;
+}
+
+.registro button{
+
+    border-radius: 10px;
+    color: #fff;
+    background: #174b8b;
+    width: 100px;
+    height: 30px;
+ 
  
 
-  #descripcion{
-    display: flex;
-    font-size: 20px;
-    
+}
 
-  }
-  #item-1{
-    width: 50%;
-    padding: 20px;
-    float: left;
-  }
+/* Seccion de servicios */
 
   .servicios {
    
-    display: flex;
-    justify-content: space-between; 
-    padding: 5%;
-    align-items: flex-start; 
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 70px;
+    gap: 25px;
+  
    
   }
 
@@ -121,7 +86,7 @@ padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+
 }
 
 .servicio-item img {
@@ -134,15 +99,17 @@ padding: 20px;
 .servicios p{
 
 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-text-align: justify;
+text-align: center;
 width: 80%;
 }
 
+/* Seccion de testimonios clientes */
 .testimonios {
     background-color: #121111;
-    padding: 50px 0;
+    padding: 50px;
     text-align: center;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     
 
 }
@@ -175,6 +142,7 @@ width: 80%;
     margin-top: 15px;
 }
 
+/* seccion de footer */
 .footer {
     
     color: #ffffff;
@@ -196,28 +164,46 @@ width: 80%;
     height: 30px;
 }
 
-.info-contacto p {
-    margin: 5px;
+/* pagina responsive */
+@media screen and (max-width: 1280px) {
+    *{
+        gap:10px;
+    }
+
+    .encabezado {
+
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+    }
+
+    .jumbotron{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+    }
+    .servicios {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 40px;
+    }
+
+    .servicio-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .testimonios {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 30px;
+    }
+
+    .testimonio {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 15px;
+    }
 }
-
-.registro{
-
-    padding: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-.registro button{
-
-    border-radius: 10px;
-    color: #fff;
-    background: #174b8b;
-    width: 100px;
-    height: 30px;
-}
-
-.registro input{
-
-    border-radius: 20px;
-    width: 300px;
-}
-  
